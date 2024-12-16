@@ -1,0 +1,19 @@
+<mat-sidenav-container [hasBackdrop]="hasBackdrop">
+    <mat-sidenav #sidenav [mode]="navMode" class="mat-elevation-z8" [(opened)]="isMenuOpen" role="navigation">
+
+        <mat-nav-list aria-label="Menu di navigazione">
+            <a mat-list-item aria-label="Ricerca" [routerLink]="['ricerca']" routerLinkActive="active-link">
+                <mat-icon class="menu-icon" role="img">search</mat-icon>Ricerca
+            </a>
+            <a mat-list-item aria-label="Altro" [routerLink]="['altro']" routerLinkActive="active-link">
+                <mat-icon class="menu-icon" role="img">settings</mat-icon>Altra pagina
+            </a>
+        </mat-nav-list>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content role="main">
+        <router-outlet (activate)="onActivate($event)"></router-outlet>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

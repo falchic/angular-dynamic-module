@@ -1,0 +1,29 @@
+<div class="page-container-small">
+    <div class="page-content">
+        <mat-card>
+            <div class="card-body">
+                <h5 class="card-title">Seleziona il modulo</h5>
+                <div class="select-modulo" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="5px"
+                    fxLayout.xs="column">
+                    <div fxFlex="85" fxFlex.xs="100"
+                        [appIsLoading]="loadingService.isLoading(this, LoadingIndicator.MODULI_LIST)"
+                        [background]="'full'">
+                        <mat-form-field appearance="fill" *ngIf="moduli && moduli.length > 0">
+                            <mat-label>Modulo</mat-label>
+                            <mat-select [(value)]="selectedValue">
+                                <mat-option *ngFor="let m of moduli" [value]="m">{{m.nome}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <div *ngIf="moduli && moduli.length == 0">Nessun modulo attivo</div>
+                    </div>
+                    <div fxFlex="15">
+                        <a mat-flat-button color="primary" *ngIf="moduli && moduli.length > 0"
+                            [disabled]="!selectedValue"
+                            [routerLink]="['/'+selectedValue?.categoria+'/'+selectedValue?.id+'/ricerca']">Vai</a>
+                    </div>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+</div>

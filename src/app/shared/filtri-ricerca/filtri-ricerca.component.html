@@ -1,0 +1,15 @@
+<mat-card>
+    <div class="card-body">
+        <h5 class="card-title">Filtri ricerca</h5>
+        <form [formGroup]="form">
+            <div class="dynamic-form">
+                <ng-container *ngFor="let field of fields" dynamicField [field]="field" [group]="form">
+                </ng-container>
+            </div>
+        </form>
+        <div class="button-wrapper">
+            <button mat-stroked-button color="basic" (click)="reset()">Pulisci</button>
+            <button mat-flat-button color="primary" (click)="search()">Cerca</button>
+        </div>
+    </div>
+</mat-card>

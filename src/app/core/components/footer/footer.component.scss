@@ -1,0 +1,28 @@
+.footer {
+    padding   : 1rem;
+    font-size : 12px;
+    background: #3f51b5;
+    color     : #e6e6e6;
+
+    .footer-list {
+        align-items: center;
+        display    : flex;
+        flex-flow  : row wrap;
+
+        .footer-copyright {
+            display        : flex;
+            flex           : 1;
+            justify-content: flex-end;
+            flex-direction : column;
+            padding-right  : 30px;
+            font-size      : 14px;
+        }
+
+        .footer-copyright>div {
+            display       : flex;
+            flex-direction: column;
+            align-self    : flex-end;
+            text-align    : center;
+        }
+    }
+}

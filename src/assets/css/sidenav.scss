@@ -1,0 +1,43 @@
+// sidenav
+mat-sidenav-container {
+    min-height: calc(100vh - 116px);
+    background: #e3e1ec;
+
+    mat-sidenav {
+        width: 240px;
+
+        .mat-mdc-nav-list {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .mat-mdc-nav-list .mat-mdc-list-item {
+            border-radius: 1.5rem;
+            margin-bottom: 5px;
+            height: unset;
+        }
+
+        .mat-mdc-nav-list .mat-mdc-list-item.active-link {
+            background-color: rgb(51 65 85 / .15) !important;
+
+            mat-icon {
+                background: #303f9f;
+                color: #fff;
+            }
+        }
+
+        ::ng-deep .mdc-list-item__content {
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            mat-icon {
+                background: rgba(0, 0, 0, 0.12);
+                color: #0000008a;
+                margin-right: 12px;
+                padding: 7px;
+                border-radius: 50%;
+                vertical-align: middle;
+            }
+        }
+    }
+}

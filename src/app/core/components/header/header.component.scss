@@ -1,0 +1,24 @@
+.nav-spacer {
+    flex: 1 1 auto;
+}
+
+.home-button {
+    img {
+        width: 34px;
+        padding-right: 14px;
+    }
+
+    span {
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+
+.mat-toolbar {
+    position: relative;
+    z-index: 2;
+}
+
+img {
+    height: 100%;
+}
